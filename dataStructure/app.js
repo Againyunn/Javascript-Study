@@ -1,6 +1,7 @@
 import * as Stack from "./Stack.js";
 import * as Queue from "./Queue.js";
 import * as CircularQueue from "./CircularQueue.js";
+import * as PriorityQueue from "./PriorityQueue.js";
 
 /**Stack */
 // Stack.pushItem(1);
@@ -29,12 +30,23 @@ import * as CircularQueue from "./CircularQueue.js";
 // console.log(result);
 
 /**Circular Queue */
-CircularQueue.enqueue(1);
-CircularQueue.enqueue(2);
-CircularQueue.enqueue(3);
+// CircularQueue.enqueue(1);
+// CircularQueue.enqueue(2);
+// CircularQueue.enqueue(3);
 
-console.log(CircularQueue.dequeue());
+// console.log(CircularQueue.dequeue());
 
-console.log(CircularQueue.peek());
+// console.log(CircularQueue.peek());
 
-console.log(CircularQueue.size());
+// console.log(CircularQueue.size());
+
+/** Priority Queue */
+const queue = new PriorityQueue.PriorityQueue();
+queue.enqueue(12);
+queue.enqueue(22);
+queue.enqueue(30);
+console.log("Queue list: ", queue.items);
+
+while (!queue.isEmpty()) {
+  console.log("MAX PRIORITY: ", queue.dequeue());
+}
