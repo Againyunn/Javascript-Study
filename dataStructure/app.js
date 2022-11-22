@@ -3,6 +3,7 @@ import * as Queue from "./Queue.js";
 import * as CircularQueue from "./CircularQueue.js";
 import * as PriorityQueue from "./PriorityQueue.js";
 import * as LinkedStack from "./LinkedStack.js";
+import * as LinkedList from "./LinkedList.js";
 
 /**Stack */
 // Stack.pushItem(1);
@@ -53,17 +54,28 @@ import * as LinkedStack from "./LinkedStack.js";
 // }
 
 /** LinkedStack */
-const linkedStack = new LinkedStack.LinkedStack();
+// const linkedStack = new LinkedStack.LinkedStack();
 
-linkedStack.push(1);
-linkedStack.push(2);
-linkedStack.push(3);
-console.log(linkedStack.peek());
-linkedStack.pop();
+// linkedStack.push(1);
+// linkedStack.push(2);
+// linkedStack.push(3);
+// console.log(linkedStack.peek());
+// linkedStack.pop();
 
-console.log(linkedStack.peek());
-linkedStack.push(3);
-linkedStack.push(4);
-console.log(linkedStack.size());
+// console.log(linkedStack.peek());
+// linkedStack.push(3);
+// linkedStack.push(4);
+// console.log(linkedStack.size());
 
-console.log("all linkedStack's data: ", linkedStack.getAllList());
+// console.log("all linkedStack's data: ", linkedStack.getAllList());
+
+/** LinkedList */
+
+const linkedList = new LinkedList.LinkedList();
+
+linkedList.insert("a", 1);
+linkedList.insert("b", 2);
+linkedList.insert("c", 3);
+console.log(linkedList.display());
+linkedList.delete(0);
+console.log(linkedList.display());
