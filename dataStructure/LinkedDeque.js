@@ -38,7 +38,7 @@ export class DoublyLinkedDequeue {
   display() {
     if (!this.isEmpty()) {
       let node = this.front;
-      console.log(node);
+
       let result = "";
 
       while (node !== null) {
