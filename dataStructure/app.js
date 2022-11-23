@@ -4,6 +4,7 @@ import * as CircularQueue from "./CircularQueue.js";
 import * as PriorityQueue from "./PriorityQueue.js";
 import * as LinkedStack from "./LinkedStack.js";
 import * as LinkedList from "./LinkedList.js";
+import * as CircularLinkedQueue from "./CircularLinkedQueue.js";
 
 /**Stack */
 // Stack.pushItem(1);
@@ -71,11 +72,22 @@ import * as LinkedList from "./LinkedList.js";
 
 /** LinkedList */
 
-const linkedList = new LinkedList.LinkedList();
+// const linkedList = new LinkedList.LinkedList();
 
-linkedList.insert("a", 1);
-linkedList.insert("b", 2);
-linkedList.insert("c", 3);
-console.log(linkedList.display());
-linkedList.delete(0);
-console.log(linkedList.display());
+// linkedList.insert("a", 1);
+// linkedList.insert("b", 2);
+// linkedList.insert("c", 3);
+// console.log(linkedList.display());
+// linkedList.delete(0);
+// console.log(linkedList.display());
+
+/** CircularLinkedQueue */
+
+const circularLinkedQueue = new CircularLinkedQueue.CircularLinkedQueue();
+
+circularLinkedQueue.enqueue(11);
+circularLinkedQueue.enqueue(12);
+circularLinkedQueue.enqueue(13);
+console.log(circularLinkedQueue.peek());
+console.log("dequeue: ", circularLinkedQueue.dequeue());
+console.log(circularLinkedQueue.display());
