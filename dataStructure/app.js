@@ -5,6 +5,7 @@ import * as PriorityQueue from "./PriorityQueue.js";
 import * as LinkedStack from "./LinkedStack.js";
 import * as LinkedList from "./LinkedList.js";
 import * as CircularLinkedQueue from "./CircularLinkedQueue.js";
+import * as LinkedDequeue from "./LinkedDeque.js";
 
 /**Stack */
 // Stack.pushItem(1);
@@ -71,7 +72,6 @@ import * as CircularLinkedQueue from "./CircularLinkedQueue.js";
 // console.log("all linkedStack's data: ", linkedStack.getAllList());
 
 /** LinkedList */
-
 // const linkedList = new LinkedList.LinkedList();
 
 // linkedList.insert("a", 1);
@@ -82,12 +82,22 @@ import * as CircularLinkedQueue from "./CircularLinkedQueue.js";
 // console.log(linkedList.display());
 
 /** CircularLinkedQueue */
+// const circularLinkedQueue = new CircularLinkedQueue.CircularLinkedQueue();
 
-const circularLinkedQueue = new CircularLinkedQueue.CircularLinkedQueue();
+// circularLinkedQueue.enqueue(11);
+// circularLinkedQueue.enqueue(12);
+// circularLinkedQueue.enqueue(13);
+// console.log(circularLinkedQueue.peek());
+// console.log("dequeue: ", circularLinkedQueue.dequeue());
+// console.log(circularLinkedQueue.display());
 
-circularLinkedQueue.enqueue(11);
-circularLinkedQueue.enqueue(12);
-circularLinkedQueue.enqueue(13);
-console.log(circularLinkedQueue.peek());
-console.log("dequeue: ", circularLinkedQueue.dequeue());
-console.log(circularLinkedQueue.display());
+/** LinkedDequeue */
+const linkedDequeue = new LinkedDequeue.DoublyLinkedDequeue();
+
+linkedDequeue.addFront(11);
+linkedDequeue.addFront(12);
+console.log(linkedDequeue.display());
+console.log("delete front: ", linkedDequeue.deleteRear());
+console.log(linkedDequeue.display());
+linkedDequeue.addRear(13);
+console.log(linkedDequeue.display());
