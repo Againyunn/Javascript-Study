@@ -6,6 +6,8 @@ import * as LinkedStack from "./LinkedStack.js";
 import * as LinkedList from "./LinkedList.js";
 import * as CircularLinkedQueue from "./CircularLinkedQueue.js";
 import * as LinkedDequeue from "./LinkedDeque.js";
+import * as Sort from "./Sort.js";
+import * as BinarySearch from "./BinarySearch.js";
 
 /**Stack */
 // Stack.pushItem(1);
@@ -92,12 +94,39 @@ import * as LinkedDequeue from "./LinkedDeque.js";
 // console.log(circularLinkedQueue.display());
 
 /** LinkedDequeue */
-const linkedDequeue = new LinkedDequeue.DoublyLinkedDequeue();
+// const linkedDequeue = new LinkedDequeue.DoublyLinkedDequeue();
 
-linkedDequeue.addFront(11);
-linkedDequeue.addFront(12);
-console.log(linkedDequeue.display());
-console.log("delete front: ", linkedDequeue.deleteRear());
-console.log(linkedDequeue.display());
-linkedDequeue.addRear(13);
-console.log(linkedDequeue.display());
+// linkedDequeue.addFront(11);
+// linkedDequeue.addFront(12);
+// console.log(linkedDequeue.display());
+// console.log("delete front: ", linkedDequeue.deleteRear());
+// console.log(linkedDequeue.display());
+// linkedDequeue.addRear(13);
+// console.log(linkedDequeue.display());
+
+/** Selection Sort */
+// let testArray = [10, 2, 3, 5, 1, 8, 9];
+// console.log("" + Sort.SelectionSort(testArray));
+// console.log("" + Sort.InsertionSort(testArray));
+// console.log("" + Sort.BubbleSort(testArray));
+
+/** Binary Search */
+// let testArray = [10, 2, 3, 5, 1, 8, 9];
+
+// console.log(
+//   `itenary binary search index: ${BinarySearch.BinarySearch(
+//     testArray,
+//     2,
+//     0,
+//     testArray.length - 1
+//   )}`
+// );
+
+// console.log(
+//   `recursive binary search index: ${BinarySearch.BinarySearchRecursive(
+//     testArray,
+//     2,
+//     0,
+//     testArray.length - 1
+//   )}`
+// );
