@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let stack = new Set();
+        let arr = s.split("");
+
+        arr.map((el) => {
+          stack.add(el);
+        });
+
+        let answer = [...stack];
+        answer = answer.join("");
+
+        return answer;
+      }
+      console.log(solution("ksekkset"));
+    </script>
+  </body>
+</html>

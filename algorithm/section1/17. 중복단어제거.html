@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let stack = [];
+
+        s.map((el, idx) => {
+          if (idx === 0) stack.push(el);
+          else if (!stack.includes(el)) {
+            stack.push(el);
+          }
+        });
+
+        let answer = "";
+
+        stack.map((el) => {
+          answer += `${el}\n`;
+        });
+
+        return answer;
+      }
+      let str = ["good", "time", "good", "time", "student"];
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
