@@ -6,6 +6,42 @@
   <body>
     <script>
       function solution(arr) {
+        let dx = [-1, 0, 1, 0];
+        let dy = [0, 1, 0, -1];
+        let n = arr.length;
+
+        let answer = 0;
+
+        const isValid = (a, b) => {
+          if (a + b < 0 || a + b > n - 1) return false;
+          return true;
+        };
+
+        for (var i = 0; i < n; i++) {
+          for (var j = 0; j < n; j++) {
+            let item = arr[i][j];
+
+            let check = 0;
+            let isMount = true;
+            let maxItem = item;
+
+            while (check < 4) {
+              if (isValid(i, dx[check]) && isValid(j, dy[check])) {
+                let newItem = arr[i + dx[check]][j + dy[check]];
+
+                if (maxItem < newItem) {
+                  maxItem = newItem;
+                  isMount = false;
+                }
+              }
+
+              check++;
+            }
+
+            if (isMount) answer++;
+          }
+        }
+
         return answer;
       }
 
