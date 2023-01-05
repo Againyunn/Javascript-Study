@@ -6,6 +6,24 @@
   <body>
     <script>
       function solution(n, arr) {
+        let maxNum = 0;
+
+        for (var i = 0; i < n; i++) {
+          let thisNumArr = arr[i].toString().split("");
+
+          thisNumArr = thisNumArr.sort((a, b) => b - a);
+
+          let thisMaxNum = thisNumArr.join("");
+
+          thisMaxNum = parseInt(thisMaxNum);
+
+          if (thisMaxNum > maxNum) {
+            maxNum = thisMaxNum;
+          }
+        }
+
+        answer = maxNum;
+
         return answer;
       }
 
