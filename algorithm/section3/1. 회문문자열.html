@@ -6,6 +6,17 @@
   <body>
     <script>
       function solution(s) {
+        s = s.toLowerCase();
+        let arr = s.split("");
+        let len = arr.length;
+        let answer = true;
+
+        let reverseIdx = len - 1;
+        for (var i = 0; i < len; i++) {
+          if (arr[i] !== arr[reverseIdx]) answer = false;
+          reverseIdx--;
+        }
+
         return answer;
       }
 
