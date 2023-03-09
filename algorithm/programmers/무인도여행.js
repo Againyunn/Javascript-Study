@@ -13,13 +13,13 @@ function solution(maps) {
   let mapX = matrix.length - 1;
   let mapY = matrix[0].length - 1;
 
-  for (let i = 0; i <= row; i++) {
-    for (let j = 0; j <= col; j++) {
-      // 방문 확인
-      if (landNum === "X") continue;
-
+  for (let i = 0; i <= mapX; i++) {
+    for (let j = 0; j <= mapY; j++) {
       let landNum = matrix[i][j];
       landNum = Number(landNum);
+
+      // 방문 확인
+      if (landNum === "X") continue;
 
       // 방문 처리
       matrix[i][j] = "X";
@@ -35,7 +35,7 @@ function solution(maps) {
         for (let i = 0; i < 4; i++) {
           let [nx, ny] = [x + dx[i], y + dy[i]];
 
-          // 범위를 벋어나는 경우
+          // 범위를 벗어나는 경우
           if (0 > nx || nx > mapX || 0 > ny || ny > mapY) continue;
 
           let nv = matrix[nx][ny];
